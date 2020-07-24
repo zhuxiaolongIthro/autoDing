@@ -5,7 +5,7 @@ curData=$(date +"%Y-%m-%d")
 
 
 writeLog(){
-    echo $(date +"%H:%M:%S") $1 >> $path/log/"$curData".log
+    echo $(date +"%H:%M:%S") $1 >> $path/log/$curData.log
 }
 
 tap(){
@@ -70,11 +70,11 @@ sleep 5s
 sh $path/dumpXml.sh ui2
 #上班考勤状态
 #9、执行点击操作
-sleep 2s
+sleep 5s
 sh $path/checkElement.sh 上班打卡 $path/ui2.xml
 if [ $? == 0 ]
 then writeLog "已经进入考勤界面 上班考勤"
-#    tap 500 600
+    tap 500 600
 fi
 #上班考勤圆圈
 ##下班考勤状态
@@ -100,7 +100,7 @@ sh $path/checkElement.sh 更新打卡 $path/ui2.xml
 #logTime
 if [ $? == 0 ]
 then writeLog "已经进入考勤界面 更新下班考勤"
-    tap 150 1150
+    tap 150 1130
     # 检查 确认弹框
     checkConfirm
 else exit 1;

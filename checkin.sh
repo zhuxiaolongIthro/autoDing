@@ -64,16 +64,14 @@ then
         then
             echo "执行成功";
             sh $path/record.sh record pm true;
-#            sh $path/email.sh vvweilong@126.com "下班打卡成功"
+            sh $path/email.sh vvweilong@126.com "下班打卡成功"
             clear
         else
             echo "执行失败";
             sh $path/record.sh record pm false;
-#            sh $path/email.sh vvweilong@126.com "下班打卡失败"
+            sh $path/email.sh vvweilong@126.com "下班打卡失败"
             clear
         fi
     fi
 fi
-
-echo "test jenkins"
 exit 0;
