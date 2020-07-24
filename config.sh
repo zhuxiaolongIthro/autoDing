@@ -38,8 +38,8 @@ readConfigToM(){
         ;;
         esac
     done <$configPath/$fileName
-#    echo "上班打卡时间 $inStartTime ~ $inEndTime"
-#    echo "下班打卡时间 $outStartTime ~ $outEndTime"
+    echo "上班打卡时间 $inStartTime ~ $inEndTime"
+    echo "下班打卡时间 $outStartTime ~ $outEndTime"
 }
 
 updateConfig(){
