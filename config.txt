@@ -1,4 +1,4 @@
 checkInStartTime=9:10:00
 checkInEndTime=10:00:00
-checkOutStartTime=18:00:00
+checkOutStartTime=15:00:00
 checkOutEndTime=19:20:00
